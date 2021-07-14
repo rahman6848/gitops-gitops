@@ -21,7 +21,7 @@ pipeline {
         branch 'master'
             }
       steps {
-        sh 'oc app -k config'
+        sh 'oc apply -k config'
         sh './wait_oauth.sh'
       }
     }
